@@ -10,6 +10,14 @@ const routes: Routes = [
   {
     path: 'folder/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+  },
+  {
+    path: 'login-first',
+    loadChildren: () => import('./auth/login-first/login-first.module').then( m => m.LoginFirstPageModule)
+  },
+  {
+    path: 'login-second',
+    loadChildren: () => import('./auth/login-second/login-second.module').then( m => m.LoginSecondPageModule)
   }
 ];
 
