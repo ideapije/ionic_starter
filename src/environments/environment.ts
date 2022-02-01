@@ -12,6 +12,7 @@ export const environment = {
     messagingSenderId: '1005122777456',
     measurementId: 'G-7XDMDEDH7W',
   },
+  googleAPIKey: 'AIzaSyAn03eUECf5alGBDnAXjQIgV7ogEe0AAnA',
   production: false
 };
 

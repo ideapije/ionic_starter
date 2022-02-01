@@ -1,0 +1,17 @@
+.otp-kode {
+  h1 {
+    border: 1px solid var(--ion-color-medium);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 0;
+  }
+}
+
+.otp-code {
+  position: absolute;
+  padding: 1rem;
+  margin-top: 10px;
+  width: calc(100% - 3rem);
+  opacity: 0;
+  z-index: 2;
+}
