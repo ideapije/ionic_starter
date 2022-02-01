@@ -14,6 +14,12 @@ import { provideAnalytics,getAnalytics,ScreenTrackingService,UserTrackingService
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
+// Import Plugins
+import { File } from '@awesome-cordova-plugins/file/ngx';
+import { FileTransfer } from '@awesome-cordova-plugins/file-transfer/ngx';
+import { Geolocation } from '@awesome-cordova-plugins/geolocation/ngx';
+import { Camera } from '@awesome-cordova-plugins/camera/ngx';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +31,17 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     AppRoutingModule,
     HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)), provideAnalytics(() => getAnalytics()), provideAuth(() => getAuth()), provideFirestore(() => getFirestore())],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, ScreenTrackingService,UserTrackingService],
+  providers: [
+    {
+      provide: RouteReuseStrategy,
+      useClass: IonicRouteStrategy
+    },
+    ScreenTrackingService,UserTrackingService,
+    Geolocation,
+    Camera,
+    File,
+    FileTransfer,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
