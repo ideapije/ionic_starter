@@ -1,0 +1,41 @@
+.header {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  min-height: 9.6rem;
+  left: 0;
+  width: 100%;
+  padding-top: 2.4rem;
+
+  h1 {
+    font-weight: 600;
+  }
+
+  ion-buttons {
+    ion-button{
+      height: 3rem;
+      margin-right: -1rem;
+      --border-radius: 10px;
+    }
+  }
+}
+
+.container {
+  z-index: 20;
+  position: relative;
+  margin-top: 9rem;
+  padding-top: 1.8rem;
+  background: var(--ion-color-tin);
+  min-height: 100vh;
+  border-radius: 2rem 2rem 0 0;
+  box-shadow: 0px 0px 5px #0000003d;
+
+  .header-list {
+    h4 {
+      margin: 0;
+      display: inline;
+      border-left: 3px solid var(--ion-color-primary);
+      padding-left: 0.8rem;
+    }
+  }
+}

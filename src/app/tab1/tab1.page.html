@@ -1,17 +1,93 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" color="primary">
+  <div class="header ion-padding">
+    <ion-item lines="none" color="primary" class="ion-no-padding ion-no-margin">
+      <ion-label slot="start">
+        <ion-text color="tin">
+          <h1>Hai, Dian!</h1>
+          <p>IT Team</p>
+        </ion-text>
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button color="tin" fill="solid" size="large" mode="ios">
+          <ion-icon name="cart-outline" color="primary"></ion-icon><ion-text color="primary"> Checkout</ion-text>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="container ion-padding tab-page">
+    <div class="header-list">
+      <ion-text color="dark">
+        <h4>Memo</h4>
+      </ion-text>
+      <ion-button class="ion-float-right" size="small" fill="clear" mode="ios" color="dark">Lihat Semua</ion-button>
+    </div>
+    <app-slider-memo [slides]="slides"></app-slider-memo>
+    <br />
+    <div class="header-list">
+      <ion-text color="dark">
+        <h4>Catatan</h4>
+      </ion-text>
+      <ion-button class="ion-float-right" size="small" fill="clear" mode="ios" color="dark">Lihat Semua</ion-button>
+    </div>
+    <app-slider-memo [slides]="slides"></app-slider-memo>
+    <br />
+    <div class="header-list">
+      <ion-text color="dark">
+        <h4>Ringkasan Tugas</h4>
+      </ion-text>
+      <ion-button class="ion-float-right" size="small" fill="clear" mode="ios" color="dark">Lihat Semua</ion-button>
+    </div>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+    <ion-segment [(ngModel)]="segmentA" (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="tugas_for">
+        <ion-label>Tugas Anda</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="tugas_from">
+        <ion-label>Tugas Dari Anda</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+
+    <div *ngIf="segmentA === 'tugas_for'">
+      <app-slider-button [buttons]="buttons" class="ion-margin-bottom"></app-slider-button>
+      <ion-card button mode="ios" class="ion-no-margin">
+          <ion-card-header>
+            <ion-badge color="warning" class="ion-padding ion-margin-end">3 To Do</ion-badge>
+            <ion-badge color="success" class="ion-padding">Alayka</ion-badge>
+            <ion-text class="ion-float-right" class="ion-padding-vertical ion-float-right">12 Aug 2022</ion-text>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-text color="dark">
+              <ul>
+                <li>Fixing Bug v.0.11</li>
+              </ul>
+            </ion-text>
+            <ion-row class="ion-margin-top">
+              <ion-col>
+                <ion-text color="dark">
+                  <p class="ion-text-center ion-no-margin">Mulai</p>
+                  <h5 class="ion-text-center">12 Aug 2022</h5>
+                </ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text color="primary">
+                  <h2 class="ion-text-center">70%</h2>
+                </ion-text>
+              </ion-col>
+              <ion-col>
+                <ion-text color="dark">
+                  <p class="ion-text-center ion-no-margin">Selesai</p>
+                  <h5 class="ion-text-center">12 Des 2022</h5>
+                </ion-text>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+      </ion-card>
+    </div>
+    <div *ngIf="segmentA === 'tugas_from'">
+      <ion-text color="medium">
+        <h1 class="ion-text-center">Belum ada tugas!</h1>
+      </ion-text>
+    </div>
+  </div>
 </ion-content>

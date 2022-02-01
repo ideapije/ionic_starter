@@ -1,0 +1,29 @@
+.suprem {
+  height: 100%;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+
+  .container {
+    padding: 0 0 17px 0;
+    margin-bottom: -17px;
+    overflow: auto;
+    box-sizing: content-box;
+    width: 100%;
+
+    .list {
+      margin: 0;
+      margin-left: -0.3rem;
+      min-height: 1rem;
+      background-color: transparent;
+
+      .item {
+        margin: 0 0.3rem;
+        width: auto;
+        display: inline;
+        float: left;
+      }
+    }
+  }
+}

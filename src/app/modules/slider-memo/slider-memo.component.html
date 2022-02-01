@@ -1,0 +1,15 @@
+<div class="suprem">
+  <div class="container">
+    <div class="list" [style]="'width:' + ((widthSupreme * slides.length) * 0.74) + 'px'">
+      <div class="item" *ngFor="let item of slides">
+        <ion-text color="tin">
+          <h4>{{ item?.title }}</h4>
+          <p>{{ descriptionSLide(item?.description) }}</p>
+        </ion-text>
+        <ion-button size="small" mode="ios" color="tin">
+          <ion-text color="primary">By {{ item?.author }}</ion-text>
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</div>

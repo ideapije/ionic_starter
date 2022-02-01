@@ -13,6 +13,7 @@ export const environment = {
     measurementId: 'G-7XDMDEDH7W',
   },
   googleAPIKey: 'AIzaSyAn03eUECf5alGBDnAXjQIgV7ogEe0AAnA',
+  apiURL: '/assets/api/',
   production: false
 };
 

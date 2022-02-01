@@ -18,7 +18,7 @@ const routes: Routes = [
     path: '',
     redirectTo: 'login-first',
     pathMatch: 'full'
-  }
+  },
 ];
 @NgModule({
   imports: [

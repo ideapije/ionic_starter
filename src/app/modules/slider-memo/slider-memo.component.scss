@@ -1,0 +1,42 @@
+.suprem {
+  height: 100%;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+
+  .container {
+    padding: 0 0 17px 0;
+    margin-bottom: -17px;
+    overflow: auto;
+    box-sizing: content-box;
+    width: 100%;
+
+    .list {
+      margin: 0;
+      margin-left: -0.3rem;
+      min-height: 8rem;
+      background-color: transparent;
+
+      .item {
+        margin: 0 0.3rem;
+        padding: 1.2rem;
+        background-color: var(--ion-color-primary);
+        width: 70vw;
+        border-radius: 10px 0;
+        float: left;
+
+        h4 {
+          margin: 0;
+          font-weight: 600;
+        }
+
+        p {
+          margin-top: 12px;
+          margin-bottom: 0;
+          line-height: 2;
+        }
+      }
+    }
+  }
+}

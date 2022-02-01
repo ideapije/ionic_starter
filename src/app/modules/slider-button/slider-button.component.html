@@ -1,0 +1,9 @@
+<div class="suprem">
+  <div class="container">
+    <div class="list" [style]="'width:' + widthButton + 'px'">
+      <div class="item" *ngFor="let item of buttons">
+        <ion-button [color]="color" [mode]="mode" shape="round" fill="outline">{{ item }}</ion-button>
+      </div>
+    </div>
+  </div>
+</div>
