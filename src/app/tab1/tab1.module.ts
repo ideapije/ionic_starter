@@ -8,6 +8,7 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 import { Tab1PageRoutingModule } from './tab1-routing.module';
 import { SliderMemoComponent } from '../modules/slider-memo/slider-memo.component';
 import { SliderButtonComponent } from '../modules/slider-button/slider-button.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { SliderButtonComponent } from '../modules/slider-button/slider-button.co
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab1PageRoutingModule
+    Tab1PageRoutingModule,
+    TranslateModule.forChild()
   ],
   declarations: [
     Tab1Page,

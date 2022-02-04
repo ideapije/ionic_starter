@@ -1,0 +1,22 @@
+{
+    "hello": "Halo",
+    "home": "Beranda",
+    "projects": "Proyek",
+    "tasks": "Tugas",
+    "notifications": "Notifikasi",
+    "profile": "Profil",
+    "memo": "Memo",
+    "my_task": "Tugas Saya",
+    "notes": "Catatan",
+    "task_summary": "Ringkasan Tugas",
+    "all": "Semua",
+    "todo": "Antrian",
+    "done": "Selesai",
+    "postponed": "Ditunda",
+    "wip": "Dikerjakan",
+    "resolved": "Terselesaikan",
+    "approved": "Disetujui",
+    "declined": "Ditolak",
+    "period_start": "Mulai",
+    "period_end": "Selesai"
+}
