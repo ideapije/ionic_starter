@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { Slide } from '../modules/slider-memo/slider-memo.component';
 
 @Component({
@@ -28,7 +29,9 @@ export class Tab1Page {
   buttons = ['Semua', 'To Do', 'Done', 'Cancel', 'On Progress', 'On Review', 'On Approve', 'On Reject'];
   segmentA = 'tugas_for';
 
-  constructor() {}
+  constructor(translate: TranslateService) {
+    translate.use('id');
+  }
 
   segmentChanged(event: any) {
     console.log('Segment changed', event);

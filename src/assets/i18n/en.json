@@ -1,0 +1,22 @@
+{
+    "hello": "Hi",
+    "home": "Home",
+    "projects": "Projects",
+    "tasks": "Tasks",
+    "notifications": "Notifications",
+    "profile": "Profile",
+    "memo": "Memo",
+    "my_task": "My tasks",
+    "notes": "Notes",
+    "task_summary": "Task summary",
+    "all": "All",
+    "todo": "Todo",
+    "done": "Done",
+    "postponed": "Postponed",
+    "wip": "In Progress",
+    "resolved": "Resolved",
+    "approved": "Approved",
+    "declined": "Declined",
+    "period_start": "Start",
+    "period_end": "End"
+}
